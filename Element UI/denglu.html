@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+
+<html>
+
+
+
+<head>
+
+    <meta charset="UTF-8" />
+
+    <link rel="stylesheet" href="https://unpkg.com/element-ui/lib/theme-chalk/index.css" />
+
+    <style  >
+
+        h1 {
+
+            font-size: 30px;
+
+            text-align: center;
+
+        }
+
+    </style>
+
+
+
+</head>
+
+
+
+<body>
+
+    <el-container id="app" style="height: 700px; background-color: rgb(213, 235, 20);">
+
+        <el-main>
+
+          
+
+            <el-row>
+
+                <el-col :span="12" offset="8">
+
+                         <br></br>
+
+                         <br></br>
+
+                         
+
+                    <el-card class="box-card" style="height: 400px;width: 500px;">
+
+                        <el-form :model="user" label-width="auto">
+
+                            <el-form-item >
+
+                             <h1>登 录</h1>
+
+                            </el-form-item>
+
+                            <el-divider></el-divider>
+
+                            <el-form-item >
+
+                                <el-input v-model="user.username" placeholder="请输入用户名"></el-input>
+
+                            </el-form-item>
+
+                            <el-form-item >
+
+                                <el-input v-model="user.password" placeholder="请输入密码" :show-password=true></el-input>
+
+                            </el-form-item>
+
+                            <el-divider></el-divider>
+
+                            <el-form-item style="text-align: center;">
+
+                                <el-button style="width: 400px;" type="primary" round><i class="el-icon-user-solid"></i> 登 录</el-button>
+
+                                
+
+                            </el-form-item>
+
+                        </el-form>
+
+                    </el-card>
+
+            </el-row>
+
+            </el-col>
+
+        </el-main>
+
+    </el-container>
+
+</body>
+
+
+
+<!-- import Vue before Element -->
+
+<script src="https://unpkg.com/vue/dist/vue.js"></script>
+
+<!-- import JavaScript -->
+
+<script src="https://unpkg.com/element-ui/lib/index.js"></script>
+
+<script>
+
+    const app = new Vue({
+
+        el: "#app",
+
+        data: {
+
+            user: {
+
+                username: "",
+
+                password: "",
+
+            },
+
+        },
+
+    });
+
+</script>
+
+
+
+</html>
